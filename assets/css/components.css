@@ -1,0 +1,34 @@
+.title{
+    -webkit-text-stroke-color: var(--outerTextColor);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-fill-color: var(--innerTextColor);
+    font-family: nasalization;
+    font-size:3rem;
+    line-height: 3.1rem;
+}
+/* Component Settings */
+.socialLink{
+    display: flex;
+    align-items: center;
+}
+.socialLink svg{
+    margin-right:5px;
+    width:40px;
+    fill:#fff;
+    height:40px;
+}
+
+@media screen and (max-width:650px) {
+    .socialLink svg{
+        width:30px;
+        height:30px;
+    }
+    .socialLink{
+        font-size:0.8rem;
+    }
+}
+@media screen and (max-width:440px) {
+    .socialLink .link{
+        display: none;
+    }
+}

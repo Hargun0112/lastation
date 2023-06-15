@@ -1,0 +1,26 @@
+:root{
+    font-size:16px;
+    --outerTextColor:#7d7f72;
+    --innerTextColor:#555852;
+    --themePink:#e33b92;
+    --themePinkGradient:#d5e23d;
+    --themeBlue:#6755a0;
+    --themeBlueGradient:#ffc063;
+    --max-width:920px;
+}
+
+@font-face{
+    font-family: nasalization;
+    src: url(../fonts/nasalization-rg.otf);
+}
+
+::-webkit-scrollbar{
+    width:7px;
+}
+::-webkit-scrollbar-track{
+    background:linear-gradient(var(--innerTextColor),white)
+}
+::-webkit-scrollbar-thumb{
+    border-radius:15px;
+    background: linear-gradient(180deg,black,var(--themeBlue));
+}

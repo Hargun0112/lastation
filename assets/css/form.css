@@ -1,0 +1,21 @@
+.form-group + .form-group{
+    margin-top:15px;
+}
+.label{
+    font-size:1.1rem;
+    color:var(--innerTextColor)
+}
+.custom-button{
+    border:none;
+    color:white;
+    padding:0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.button-pink{
+    background-color: var(--themePink);
+}
+.button-blue{
+    background-size: 200% 200%;
+    background-color: var(--themeBlue);
+}
