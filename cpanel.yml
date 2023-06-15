@@ -1,0 +1,4 @@
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home5/betterways/public_html/lastation
+    - /bin/cp -R * $DEPLOYPATH
