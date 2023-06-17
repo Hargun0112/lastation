@@ -1,0 +1,26 @@
+.tierSection{
+    margin:1rem 0rem 0rem 0rem;
+    padding:1rem 0.5rem;
+}
+
+.tierItem{
+    font-size:0.9rem;
+}
+.tierItem .subTitle{
+    font-size:1.2rem;
+    font-weight: bold;
+}
+.tierItem .price{
+    font-size: 1rem;
+    font-weight: bold;
+}
+.tierItem .details{
+    color:gray;
+    font-style: italic;
+}
+.tierItem div+div{
+    margin-top:0.5rem;
+}
+.tierItem .details ul{
+    padding-left:1rem;
+}

@@ -1,0 +1,45 @@
+.tierItem{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tierItem .badge{
+    width:80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:80px;
+    transform: translateY(40px);
+    border-radius: 50%;
+}
+.badge svg{
+    height: 70px;
+    width: 70px;
+    fill:brown;
+}
+.tierItem .itemBox{
+    width: 100%;
+    padding:10px 15px;
+    padding-top:30px;
+    background-color: #f2f2f2;
+}
+.itemBox .title{
+    font-size:1.2rem;
+    text-align: center;
+}
+.itemBox .price{
+    font-size:1rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.itemBox .details{
+    color:gray;
+    font-style: italic;
+}
+.itemBox .details ul{
+    padding-left:1rem;
+}
