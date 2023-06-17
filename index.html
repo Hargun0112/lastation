@@ -73,7 +73,7 @@
                         <div class="col-12 form-group">
                             <label class="label" for="">Select tier</label>
                             <select name="options" class="form-control" id="options">
-                                <option value="free">Bronze </option>
+                                <option value="bronze">Bronze </option>
                                 <option value="silver">Silver</option>
                                 <option value="gold">Gold</option>
                                 <option value="platinum">Platinum</option>
@@ -147,19 +147,15 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 form-group">
-                            <label class="label" for="message">Message</label>
-                            <textarea name="message" class="form-control" id="message" cols="30" rows="5"></textarea>
-                        </div>
-                        <div class="col-12 form-group">
-                                <button type="button" class="custom-button button-pink">Send</button>
-                        </div>
                     </div>
                 </form>
             </section>
             <section class="section">
-                <div class="row mt-3 px-3 px-lg-1">
-                    <button type="button" class="py-3 custom-button button-blue">Pay now with PayPal</button>
+                <div class="row mt-3 px-3 px-lg-1 justify-content-center">
+                    <button type="button" data-sub-id="bronze" class="payButton custom-button button-blue py-3">Proceed With Free Account</button>
+                    <div data-sub-id="silver" class="d-none payButton" id="paypal-button-container-P-4AS0847971711880WMSF6YIA" style="width: 100%;margin:0px auto;width:100%"></div>
+                    <div data-sub-id="gold" class="d-none payButton" id="paypal-button-container-P-5AE83279JN847090BMSF6YYI" style="width:100%;"></div>
+                    <div data-sub-id="platinum" class="d-none payButton" id="paypal-button-container-P-36A44545FX924983AMSF7BNQ" style="width:100%;"></div>
                 </div>
             </section>
         </div>
@@ -187,4 +183,64 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 <script src="./assets/js/main.js"></script>
+
+<script src="https://www.paypal.com/sdk/js?client-id=AaF1lXS3G0B9EPpwJN5HOCWn4uheHmkyZXlOiesH6F8870TmfsyM6iAf3OujHKHa2dc7ogaPZOtuUD4H&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
+<script>
+  paypal.Buttons({
+      style: {
+          shape: 'pill',
+          color: 'blue',
+          layout: 'horizontal',
+          disableMaxWidth: true ,
+          label: 'subscribe'
+      },
+      createSubscription: function(data, actions) {
+        return actions.subscription.create({
+          plan_id: 'P-4AS0847971711880WMSF6YIA'
+        });
+      },
+      onApprove: function(data, actions) {
+        alert(data.subscriptionID); // You can add optional success message for the subscriber here
+      }
+  }).render('#paypal-button-container-P-4AS0847971711880WMSF6YIA'); // Renders the PayPal button
+    
+  
+  paypal.Buttons({
+        style: {
+            shape: 'pill',
+            color: 'blue',
+            layout: 'horizontal',
+            disableMaxWidth:true,
+            label: 'subscribe'
+        },
+        createSubscription: function(data, actions) {
+        return actions.subscription.create({
+            /* Creates the subscription */
+            plan_id: 'P-5AE83279JN847090BMSF6YYI'
+        });
+        },
+        onApprove: function(data, actions) {
+        alert(data.subscriptionID); // You can add optional success message for the subscriber here
+        }
+    }).render('#paypal-button-container-P-5AE83279JN847090BMSF6YYI'); // Renders the PayPal button
+
+    paypal.Buttons({
+      style: {
+          shape: 'pill',
+          color: 'blue',
+          layout: 'horizontal',
+          disableMaxWidth:true,
+          label: 'subscribe'
+      },
+      createSubscription: function(data, actions) {
+        return actions.subscription.create({
+          /* Creates the subscription */
+          plan_id: 'P-36A44545FX924983AMSF7BNQ'
+        });
+      },
+      onApprove: function(data, actions) {
+        alert(data.subscriptionID); // You can add optional success message for the subscriber here
+      }
+  }).render('#paypal-button-container-P-36A44545FX924983AMSF7BNQ'); // Renders the PayPal button
+</script>
 </html>
