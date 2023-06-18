@@ -74,12 +74,12 @@
                             <label class="label" for="">Select tier</label>
                             <select name="options" class="form-control" id="options">
                                 <option value="bronze">Bronze </option>
-                                <option value="silver">Silver</option>
-                                <option value="gold">Gold</option>
-                                <option value="platinum">Platinum</option>
+                                <option value="silver" data-planid="P-4AS0847971711880WMSF6YIA">Silver</option>
+                                <option value="gold" data-planid="P-5AE83279JN847090BMSF6YYI">Gold</option>
+                                <option value="platinum" data-planid="P-36A44545FX924983AMSF7BNQ">Platinum</option>
                             </select>
                             <div class="tierSection">
-                                <div class="tierItem" data-id="free">
+                                <div class="tierItem" data-id="bronze">
                                     <div class="subTitle">
                                         Free Account - Bronze
                                     </div>
@@ -152,10 +152,8 @@
             </section>
             <section class="section">
                 <div class="row mt-3 px-3 px-lg-1 justify-content-center">
-                    <button type="button" data-sub-id="bronze" class="payButton custom-button button-blue py-3">Proceed With Free Account</button>
-                    <div data-sub-id="silver" class="d-none payButton" id="paypal-button-container-P-4AS0847971711880WMSF6YIA" style="width: 100%;margin:0px auto;width:100%"></div>
-                    <div data-sub-id="gold" class="d-none payButton" id="paypal-button-container-P-5AE83279JN847090BMSF6YYI" style="width:100%;"></div>
-                    <div data-sub-id="platinum" class="d-none payButton" id="paypal-button-container-P-36A44545FX924983AMSF7BNQ" style="width:100%;"></div>
+                    <button type="button" data-sub-id="bronze" class="checkoutButton custom-button button-blue py-3">Proceed With Free Account</button>
+                    <div data-sub-id="platinum" class="d-none payButton" style="width:100%;"></div>
                 </div>
             </section>
         </div>
@@ -186,6 +184,7 @@
 
 <script src="https://www.paypal.com/sdk/js?client-id=AaF1lXS3G0B9EPpwJN5HOCWn4uheHmkyZXlOiesH6F8870TmfsyM6iAf3OujHKHa2dc7ogaPZOtuUD4H&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
 <script>
+ let planId="P-4AS0847971711880WMSF6YIA";
   paypal.Buttons({
       style: {
           shape: 'pill',
@@ -196,51 +195,14 @@
       },
       createSubscription: function(data, actions) {
         return actions.subscription.create({
-          plan_id: 'P-4AS0847971711880WMSF6YIA'
+          plan_id: planId
         });
       },
       onApprove: function(data, actions) {
         alert(data.subscriptionID); // You can add optional success message for the subscriber here
       }
-  }).render('#paypal-button-container-P-4AS0847971711880WMSF6YIA'); // Renders the PayPal button
+  }).render('.payButton'); // Renders the PayPal button
     
   
-  paypal.Buttons({
-        style: {
-            shape: 'pill',
-            color: 'blue',
-            layout: 'horizontal',
-            disableMaxWidth:true,
-            label: 'subscribe'
-        },
-        createSubscription: function(data, actions) {
-        return actions.subscription.create({
-            /* Creates the subscription */
-            plan_id: 'P-5AE83279JN847090BMSF6YYI'
-        });
-        },
-        onApprove: function(data, actions) {
-        alert(data.subscriptionID); // You can add optional success message for the subscriber here
-        }
-    }).render('#paypal-button-container-P-5AE83279JN847090BMSF6YYI'); // Renders the PayPal button
-
-    paypal.Buttons({
-      style: {
-          shape: 'pill',
-          color: 'blue',
-          layout: 'horizontal',
-          disableMaxWidth:true,
-          label: 'subscribe'
-      },
-      createSubscription: function(data, actions) {
-        return actions.subscription.create({
-          /* Creates the subscription */
-          plan_id: 'P-36A44545FX924983AMSF7BNQ'
-        });
-      },
-      onApprove: function(data, actions) {
-        alert(data.subscriptionID); // You can add optional success message for the subscriber here
-      }
-  }).render('#paypal-button-container-P-36A44545FX924983AMSF7BNQ'); // Renders the PayPal button
 </script>
 </html>
