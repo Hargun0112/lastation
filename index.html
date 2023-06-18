@@ -73,45 +73,69 @@
                         <div class="col-12 form-group">
                             <label class="label" for="">Select tier</label>
                             <select name="options" class="form-control" id="options">
-                                <option value="bronze">Bronze </option>
-                                <option value="silver" data-planid="P-4AS0847971711880WMSF6YIA">Silver</option>
-                                <option value="gold" data-planid="P-5AE83279JN847090BMSF6YYI">Gold</option>
-                                <option value="platinum" data-planid="P-36A44545FX924983AMSF7BNQ">Platinum</option>
+                                <option value="rainbowShrimp" data-planid="P-72E99166DX625493SMSGXD3Y">Rainbow Shrimp</option>
+                                <option value="vip" data-planid="P-3F281581WU6810531MSGXEVY">VIP</option>
+                                <option value="customVip" data-planid="P-0PL60680E87787412MSGXFIA">Custom VIP</option>
+                                <option value="uploadedVip" data-planid="P-1FA008260H6808024MSGXFXA">Uploaded VIP</option>
                             </select>
                             <div class="tierSection">
-                                <div class="tierItem" data-id="bronze">
+                                <div class="tierItem" data-id="rainbowShrimp">
                                     <div class="subTitle">
-                                        Free Account - Bronze
+                                        5 USD - Rainbow Shrimp
                                     </div>
                                     <div class="price">
-                                        Free
+                                        $5/Month
                                     </div>
                                     <div class="details">
                                         <ul>
                                             <li>
-                                                Simple video uploads of files up to 256MB that will last for 2 hours.
+                                                Rainbow Shrimp Discord role.
+                                            </li>
+                                            <li>
+                                                Rainbow Shrimp icon & highlighted display name in our worlds.
+                                            </li>
+                                            <li>
+                                                QOL improvements, Such as the use of our portals to go between our worlds.
+                                            </li>
+                                            <li>
+                                                Priority support in Discord via the "Shrimp Squad" Channel.
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="tierItem" data-id="silver" style="display:none">
+                                <div class="tierItem" data-id="vip" style="display:none">
                                     <div class="subTitle">
-                                        10 USD - Silver Tier
+                                        10 USD - VIP
                                     </div>
                                     <div class="price">
-                                        10USD/month
+                                        $10/month
                                     </div>
                                     <div class="details">
                                         <ul>
                                             <li>
-                                                Video uploads of files up to 512MB that last for 12 hours.
+                                                VIP Discord role.
+                                            </li>
+                                            <li>
+                                                VIP icon & highlighted display name in our worlds.
+                                            </li>
+                                            <li>
+                                                VIP world access.
+                                            </li>
+                                            <li>
+                                                Access to a cloneable version of Kali(VRC's most advanced NSFW Avatar) [Coming soon]
+                                            </li>
+                                            <li>
+                                                Access to experimental items via the VIP world.
+                                            </li>
+                                            <li>
+                                                All previous tier perks.
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="tierItem" data-id="gold" style="display:none">
+                                <div class="tierItem" data-id="customVip" style="display:none">
                                     <div class="subTitle">
-                                        20 USD - Gold Tier
+                                        20 USD - Custom VIP
                                     </div>
                                     <div class="price">
                                         $20/month
@@ -119,17 +143,26 @@
                                     <div class="details">
                                         <ul>
                                             <li>
-                                                Video uploads of files up to 1024MB that will not expire.
+                                                Custom image, username, and quote added to any world of your choice.
                                             </li>
                                             <li>
-                                                Account tab in the media server to manage and sort your uploaded content.
+                                                Custom VIP discord role.
+                                            </li>
+                                            <li>
+                                                Upload of the Kali(VRC's most advanced NSFW Avatar) [Coming soon]
+                                            </li>
+                                            <li>
+                                                Ability to request any asset to be added to our worlds if within our ability.
+                                            </li>
+                                            <li>
+                                                All previous tier perks.
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="tierItem" data-id="platinum" style="display:none">
+                                <div class="tierItem" data-id="uploadedVip" style="display:none">
                                     <div class="subTitle">
-                                        50 USD - Platinum Tier
+                                        50 USD - Uploaded VIP
                                     </div>
                                     <div class="price">
                                         $50/month
@@ -137,10 +170,10 @@
                                     <div class="details">
                                         <ul>
                                             <li>
-                                                Video uploads of files up to 4096MB that will not expire.
+                                                Upload of the current version of any of our worlds of your choice to your account.
                                             </li>
                                             <li>
-                                                Account tab in the media server to manage and sort your uploaded content.
+                                                All previous tier perks.
                                             </li>
                                         </ul>
                                     </div>
@@ -152,8 +185,7 @@
             </section>
             <section class="section">
                 <div class="row mt-3 px-3 px-lg-1 justify-content-center">
-                    <button type="button" data-sub-id="bronze" class="checkoutButton custom-button button-blue py-3">Proceed With Free Account</button>
-                    <div data-sub-id="platinum" class="d-none payButton" style="width:100%;"></div>
+                    <div data-sub-id="platinum" class="payButton" style="width:100%;"></div>
                 </div>
             </section>
         </div>
@@ -184,7 +216,7 @@
 
 <script src="https://www.paypal.com/sdk/js?client-id=AaF1lXS3G0B9EPpwJN5HOCWn4uheHmkyZXlOiesH6F8870TmfsyM6iAf3OujHKHa2dc7ogaPZOtuUD4H&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
 <script>
- let planId="P-4AS0847971711880WMSF6YIA";
+ let planId="P-72E99166DX625493SMSGXD3Y";
   paypal.Buttons({
       style: {
           shape: 'pill',
