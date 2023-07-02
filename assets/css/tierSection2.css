@@ -15,7 +15,8 @@
     transform: translateY(40px);
     border-radius: 50%;
 }
-.badge svg{
+.badge img{
+    object-fit: cover;
     height: 70px;
     width: 70px;
 }
