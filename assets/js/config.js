@@ -1,1 +1,1 @@
-var apiHost="http://ec2-3-145-175-75.us-east-2.compute.amazonaws.com:9999/api/";
+var apiHost="https://server.lastation.tech/api/";
