@@ -54,13 +54,17 @@
             <section class="section">
                 <form action="">
                     <div class="row mt-3">
-                        <div class="col-md-6 form-group">
+                        <div class="col-md-12 form-group mb-3">
                             <label class="label" for="">Email</label>
                             <input type="email" name="email" id="email" class="form-control">
                         </div>
                         <div class="col-md-6 form-group">
                             <label class="label" for="">Discord Username</label>
                             <input type="text" name="discordUsername" id="discordUser" class="form-control">
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label class="label" for="">VRChat Username</label>
+                            <input type="text" name="vrchatusername" id="vrchatusername" class="form-control">
                         </div>
                         <div class="col-12 form-group mt-4">
                             <label class="label" for="">Select tier</label>
@@ -229,6 +233,8 @@
     var emailCheck=false;
     let email=$("#email");
     let discordUsername=$("#discordUser");
+    let vrchatusername=$("#vrchatusername");
+
 
     function showError(error)
     {
@@ -298,13 +304,14 @@
         });
     }
   }).render('#paypal-button-container-P-42X16022AU7371539MSQKGXQ'); // Renders the PayPal button
-</script> -->
+</script>  -->
 
 <script>
 
 var emailCheck=false;
 //  let email=$("#email");
-//     let discordUsername=$("#discordUser");
+//     // let discordUsername=$("#discordUser");
+//     // let vrchatusername=$("#vrchatusername");
  let planId="P-72E99166DX625493SMSGXD3Y";
   paypal.Buttons({
       style: {
@@ -320,7 +327,7 @@ var emailCheck=false;
         });
       },
       onClick:function(data,actions){
-        if(email.val().trim()=="" || discordUsername.val().trim()=="")
+        if(email.val().trim()=="" || discordUsername.val().trim()=="" || vrchatusername.val().trim()=="")
         {
             showError("Please fill the form fields to continue");
             return actions.reject();
@@ -352,6 +359,7 @@ var emailCheck=false;
             contentType:"application/json",
             data:JSON.stringify({
                 "subId":data.subscriptionID,
+                "vrcusername":vrchatusername.val(),
                 "email":email.val(),
                 "discordUsername":discordUsername.val()
             }),
