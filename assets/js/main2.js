@@ -1,4 +1,4 @@
-let tier=$("input['name='tier']:checked").val();
+let tier=$("input[name='tier']:checked").val();
 let email=$("#email");
 let discordUsername=$("#discordUser");
 let vrchatusername=$("#vrchatusername");
