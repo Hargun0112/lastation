@@ -54,26 +54,14 @@
             <section class="section">
                 <form action="">
                     <div class="row mt-3">
-                        <div class="col-md-12 form-group mb-3">
-                            <label class="label" for="">Email</label>
-                            <input type="email" name="email" id="email" class="form-control">
-                        </div>
-                        <div class="col-md-6 form-group">
-                            <label class="label" for="">Discord Username</label>
-                            <input type="text" name="discordUsername" id="discordUser" class="form-control">
-                        </div>
-                        <div class="col-md-6 form-group">
-                            <label class="label" for="">VRChat Username</label>
-                            <input type="text" name="vrchatusername" id="vrchatusername" class="form-control">
-                        </div>
                         <div class="col-12 form-group mt-4">
                             <label class="label" for="">Select tier</label>
                             <div class="row justify-content-center justify-content-lg-between">
-                                <div class="col-lg-6 col-11">
-                                    <input type="radio" data-planid="P-72E99166DX625493SMSGXD3Y" checked name="tier" value="rainbowShrimp" id="rainbowShrimp">
-                                    <label class="tierItem" for="rainbowShrimp">
+                                <div class="col-lg-4 col-11">
+                                    <input type="radio" data-planid="P-72E99166DX625493SMSGXD3Y" checked name="tier" value="silver" id="silver">
+                                    <label class="tierItem" for="silver">
                                         <div class="badge">
-                                            <img src="./assets/images/shrimpIcon.png" alt="">
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:serif="http://www.serif.com/" ><path serif:id="shape 27" d="M10.499.471c.893-.628 2.108-.628 3.002 0 2.142 1.506 1.682 1.362 4.335 1.354 1.108-.004 2.091.682 2.429 1.696.813 2.427.527 2.052 2.679 3.544.899.623 1.275 1.733.928 2.744-.826 2.417-.83 1.953 0 4.381.347 1.011-.029 2.121-.928 2.744-2.151 1.492-1.866 1.117-2.679 3.544-.338 1.014-1.321 1.7-2.429 1.697-2.654-.009-2.193-.153-4.335 1.353-.894.629-2.109.629-3.002 0-2.143-1.505-1.682-1.363-4.335-1.353-1.108.003-2.091-.683-2.429-1.697-.812-2.43-.533-2.054-2.68-3.544-.898-.623-1.274-1.733-.927-2.744.827-2.418.83-1.953 0-4.381-.347-1.011.029-2.121.927-2.744 2.146-1.489 1.867-1.112 2.68-3.544.338-1.014 1.321-1.7 2.429-1.696 2.646.008 2.18.161 4.335-1.354"/></svg>
                                         </div>
                                         <div class="itemBox">
                                             <div class="title">
@@ -101,7 +89,7 @@
                                         </div>
                                     </label>
                                 </div>
-                                <div class="col-lg-6 col-11">
+                                <div class="col-lg-4 col-11">
                                     <input type="radio" data-planid="P-3F281581WU6810531MSGXEVY" name="tier" value="vip" id="vip">
                                     <label class="tierItem" for="vip">
                                         <div class="badge">
@@ -139,7 +127,7 @@
                                         </div>
                                     </label>
                                 </div>
-                                <div class="col-lg-6 col-11">
+                                <div class="col-lg-4 col-11">
                                     <input type="radio" data-planid="P-0PL60680E87787412MSGXFIA" name="tier" value="customVip" id="customVip">
                                     <label class="tierItem" for="customVip">
                                         <div class="badge" style="background-color: var(--themeBlue);">
@@ -174,32 +162,6 @@
                                         </div>
                                     </label>
                                 </div>
-                                <div class="col-lg-6 col-11">
-                                    <input type="radio" data-planid="P-1FA008260H6808024MSGXFXA" name="tier" value="uploadedVip" id="uploadedVip">
-                                    <label class="tierItem" for="uploadedVip">
-                                        <div class="badge" style="background-color: var(--themeNeonBlue);">
-                                            <img src="./assets/images/vipIcon.png" style="filter: brightness(0) invert(1);" alt="">
-                                        </div>
-                                        <div class="itemBox">
-                                            <div class="title">
-                                                Uploaded VIP
-                                            </div>
-                                            <div class="price">
-                                                50USD/ Month
-                                            </div>
-                                            <div class="details">
-                                                <ul>
-                                                    <li>
-                                                        Upload of the current version of any of our worlds of your choice to your account.
-                                                    </li>
-                                                    <li>
-                                                        All previous tier perks.
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </label>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -223,20 +185,12 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 
-<script src="https://www.paypal.com/sdk/js?client-id=AaF1lXS3G0B9EPpwJN5HOCWn4uheHmkyZXlOiesH6F8870TmfsyM6iAf3OujHKHa2dc7ogaPZOtuUD4H&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
-<!-- <div id="paypal-button-container-P-42X16022AU7371539MSQKGXQ"></div> 
-<script src="https://www.paypal.com/sdk/js?client-id=AWnVcAm-QhDUGgLYCoSfrxoKnQcV8EtL20NkF52OUq5lSIM0O3zWohKVx8MovL1H42e-TQICFndyXA6c&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script> 
-<script>
+<!-- <script src="https://www.paypal.com/sdk/js?client-id=AaF1lXS3G0B9EPpwJN5HOCWn4uheHmkyZXlOiesH6F8870TmfsyM6iAf3OujHKHa2dc7ogaPZOtuUD4H&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script> -->
 
-    function showError(error)
-    {
-        Swal.fire({
-            title: 'Error!',
-            text: error,
-            icon: 'error',
-            confirmButtonText: 'Continue'
-        })
-    }
+
+<div id="paypal-button-container-P-9RX56991F8405730VMS35ETI"></div>
+<script src="https://www.paypal.com/sdk/js?client-id=AdLvPBRREz5LUKv9y8fZDbg4A8i7YEk1IERk0Ga46W9AlQLu3oY4eLsS5BYZrCjffIyvrjUA5ibAWRFs&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
+<script>
   paypal.Buttons({
       style: {
           shape: 'rect',
@@ -247,61 +201,20 @@
       createSubscription: function(data, actions) {
         return actions.subscription.create({
           /* Creates the subscription */
-          plan_id: 'P-42X16022AU7371539MSQKGXQ',
-          userEmail:email.val()
+          plan_id: 'P-9RX56991F8405730VMS35ETI'
         });
-      },
-      onClick:function(data,actions){
-        if(email.val().trim()=="" || discordUsername.val().trim()=="")
-        {
-            showError("Please fill the form fields to continue");
-            return actions.reject();
-        }
-        return new Promise((resolve,reject)=>{
-            $.ajax({
-                type:"get",
-                url:`${apiHost}discord/checkUser/${email.val()}/${discordUsername.val()}`,
-                success:function(res){
-                    if(res.success===true)
-                    {
-                        resolve(actions.resolve());
-                    }
-                    else{
-                        showError("There was some error");
-                        resolve(actions.reject());
-                    }
-                },
-                error:function(data){
-                    var res=data.responseJSON;
-                    showError(res.description);
-                    resolve(actions.reject());
-                }
-            })
-        })
       },
       onApprove: function(data, actions) {
-        // console.log(actions);
-        $.ajax({
-            contentType:"application/json",
-            data:JSON.stringify({
-                "subId":data.subscriptionID,
-                "vrcusername":vrchatusername.val(),
-                "email":email.val(),
-                "role":tier,
-                "discordUsername":discordUsername.val()
-            }),
-            type:"POST",
-            url:`${apiHost}discord/store`,
-            success:function(res){
-                alert("success");
-            }
-        });
-    }
-  }).render('#paypal-button-container-P-42X16022AU7371539MSQKGXQ'); // Renders the PayPal button
-</script>  -->
+        alert(data.subscriptionID); // You can add optional success message for the subscriber here
+      }
+  }).render('#paypal-button-container-P-9RX56991F8405730VMS35ETI'); // Renders the PayPal button
+</script>
+
 
 <script>
 
+var url = new URL(window.location);
+var token = url.searchParams.get("token");
 //  let email=$("#email");
 // let discordUsername=$("#discordUser");
 // let vrchatusername=$("#vrchatusername");
