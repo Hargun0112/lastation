@@ -1,7 +1,10 @@
 let tier=$("input[name='tier']:checked").val();
-let email=$("#email");
-let discordUsername=$("#discordUser");
-let vrchatusername=$("#vrchatusername");
+
+var url = new URL(window.location);
+var token = url.searchParams.get("token")??false;
+
+let planId=$("input[name='tier']:checked").attr("data-planid");
+
 
 $(document).ready(function(){
     $("input[name='tier']").change(function(){

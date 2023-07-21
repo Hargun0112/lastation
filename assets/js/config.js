@@ -1,1 +1,1 @@
-var apiHost="https://server.lastation.tech/api/";
+var apiHost="http://localhost:9999/api";

@@ -16,14 +16,13 @@
     border-radius: 50%;
 }
 .badge svg{
-    object-fit: cover;
     height: 70px;
     width: 70px;
 }
 .tierItem .itemBox{
     width: 100%;
     height: 100%;
-    padding:5px 0px;
+    padding:10px 15px;
     padding-top:30px;
     background-color: #f2f2f2;
     transition: all 0.5s ease;
@@ -60,4 +59,3 @@ input[name='tier']:checked + label{
 .itemBox li+li{
     margin-top:0.5rem;
 }
-
